@@ -1,8 +1,7 @@
-from time import sleep
+
 
 import allure
 from data import Data
-from helpers import Helper
 from pages.basic_functionality_page import BasicFunctionalityPage
 
 
@@ -97,5 +96,7 @@ class TestBasicFunctionality:
         # Act
         basic_functionality_page.execute_move_element()
         basic_functionality_page.click_on_button_place_order()
+        basic_functionality_page.wait_visibility_element_cross()
 
+        # Assert
         assert basic_functionality_page.find_window_order().is_displayed()

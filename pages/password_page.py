@@ -1,6 +1,4 @@
 import allure
-
-from conftest import driver
 from locators.PasswordPageLocators import PasswordPageLocators
 
 from pages.base_page import BasePage

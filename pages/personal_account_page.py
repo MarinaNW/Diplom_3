@@ -1,6 +1,4 @@
 import allure
-
-from conftest import driver
 from locators.PersonalAccountPageLocators import PersonalAccountPageLocators
 
 from pages.base_page import BasePage

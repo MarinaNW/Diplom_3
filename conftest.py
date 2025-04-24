@@ -1,6 +1,8 @@
 import pytest
 from selenium import webdriver
 
+from api_methods import ApiMethods
+from helpers import Helper
 from urls import Urls
 
 
@@ -20,3 +22,22 @@ def driver(request):
     browser.quit()
 
 
+@pytest.fixture(scope="function")
+def user_data():
+   # Генерация данных пользователя
+     email = Helper.generate_email()
+     password = Helper.generate_password()
+     username = Helper.generate_name()
+
+     # Регистрация пользователя
+     response = ApiMethods.register_user(email, password, username)
+     token = response.json().get('accessToken')
+
+     yield {
+         'email': email,
+         'password': password,
+         'username': username,
+         'token': token
+     }
+
+     ApiMethods.delete_user(token)

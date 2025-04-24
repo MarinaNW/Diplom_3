@@ -2,8 +2,8 @@ from selenium.webdriver.common.by import By
 
 class BasicFunctionalityPageLocators:
     ACCOUNT_BUTTON = (By.XPATH, "//button[text()='Войти в аккаунт']")
-    CONSTRUCTOR_BUTTON = (By.XPATH, "//p[text()='Конструктор']")  # кнопка "Конструктор"
-    LOGO_BUTTON = (By.XPATH, "//div/a[@href='/']")  # логотип Stellar Burgers
+    CONSTRUCTOR_BUTTON = (By.XPATH, "//p[text()='Конструктор']")
+    LOGO_BUTTON = (By.XPATH, "//div/a[@href='/']")
     ELEMENT_ENTER = (By.XPATH, "// h2[text() = 'Вход']")
     ELEMENT = (By.XPATH, "//h1[text()='Соберите бургер']")
 
@@ -22,3 +22,5 @@ class BasicFunctionalityPageLocators:
 
     BUTTON_PLACE_ORDER = (By.XPATH, "//button[text()='Оформить заказ']")
     WINDOW_ORDER = (By.XPATH, "//p[text()='Ваш заказ начали готовить']")
+
+    ORDER_NUMBER_IN_ORDER_WINDOW = (By.XPATH, "//h2[@class='Modal_modal__title_shadow__3ikwq Modal_modal__title__2L34m text text_type_digits-large mb-8']")

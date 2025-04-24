@@ -1,7 +1,6 @@
 import allure
 from selenium.webdriver import ActionChains
-
-from conftest import driver
+from data import Data
 from locators.BasicFunctionalityPageLocators import BasicFunctionalityPageLocators
 
 from pages.base_page import BasePage
@@ -92,3 +91,7 @@ class BasicFunctionalityPage(BasePage):
     @allure.step("Найти окно заказа")
     def find_window_order(self):
         return self.find_element(self.locators.WINDOW_ORDER)
+
+    @allure.step("Ожидание элемента")
+    def wait_visibility_element_cross(self):
+        return self.wait_text_to_be_present_in_element(self.locators.ORDER_NUMBER_IN_ORDER_WINDOW, Data.FRAGMENT)

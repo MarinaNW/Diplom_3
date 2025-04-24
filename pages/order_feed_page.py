@@ -1,8 +1,7 @@
-import re
+
 
 import allure
 
-from conftest import driver
 from data import Data
 from locators.OrderFeedPageLocators import OrderFeedPageLocators
 

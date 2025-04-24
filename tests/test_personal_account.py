@@ -1,8 +1,8 @@
-from time import sleep
+
 
 import allure
 from data import Data
-from helpers import Helper
+
 from pages.personal_account_page import PersonalAccountPage
 
 

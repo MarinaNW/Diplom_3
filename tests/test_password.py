@@ -10,7 +10,6 @@ class TestPassword:
     def test_button_recover_password(self,driver):
         # Arrange
         password_page = PasswordPage(driver)
-        #password_page.open()
 
         # Act
         password_page.click_on_button_recover_password()

@@ -14,7 +14,7 @@ class OrderFeedPageLocators:
       SOURCE_ELEMENT = (By.XPATH, "//p[text()='Флюоресцентная булка R2-D3']")
       TARGET_ELEMENT = (By.XPATH, "//ul[@class='BurgerConstructor_basket__list__l9dp_']")
       BUTTON_PLACE_ORDER = (By.XPATH, "//button[text()='Оформить заказ']")
-      #TEXT_IN_ORDER_WINDOW =(By.XPATH, "//p[text()='идентификатор заказа']")
+
       CROSS = (By.XPATH, "//button[@class='Modal_modal__close_modified__3V5XS Modal_modal__close__TnseK']")
 
 
@@ -26,7 +26,7 @@ class OrderFeedPageLocators:
 
       PERSONAL_ODER = (By.XPATH, "//div/p[@class='text text_type_digits-default']")
       ORDER_FEED = (By.XPATH, "//p[text()='Лента Заказов']")
-      #TITLE_SITE_ORDER_FEED = (By.XPATH, "//h1[text()='Лента заказов']")
+
 
 
       def get_order(self, text):
